@@ -11,7 +11,8 @@ A comprehensive Markdown documentation of the SOTI MobiControl REST API, generat
 
 ## Usage
 This documentation is designed for developers integrating with SOTI MobiControl's REST API. It provides a complete reference for all available endpoints and their usage.
-Please refer to [MobiControl_API_Documentation.md](MobiControl_API_Documentation.md)
+
+Please refer to [MobiControl_API_Documentation.md](MobiControl_API_Documentation.md).
 
 ## Generation
 The documentation is automatically generated from the official Swagger specification using a Python script that converts the JSON format to well-structured Markdown.
