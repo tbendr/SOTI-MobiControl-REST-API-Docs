@@ -102,7 +102,7 @@ The MobiControl REST API is designed to have predictable resource-oriented URLs 
 
 This documentation provides you with detailed information on the MobiControl REST API available with your MobiControl environment, and gives you the ability to interact with the API calls on this page to test their functionality.
 
-<b id="Warning1" >WARNING: API calls sent from this page are executed against your MobiControl environment. Exercise extreme caution when executing each API call against a production environment and/or device.\*\*
+WARNING: API calls sent from this page are executed against your MobiControl environment. Exercise extreme caution when executing each API call against a production environment and/or device.\*\*
 
 For consultation and/or support of your MobiControl integration please contact SOTI’s Professional Services and Support teams.
 Please note that all API calls utilize double encoding, unless otherwise stated in the corresponding API call documentation.
@@ -231,7 +231,6 @@ SnHDvTH8bSz9O0vHoiPexh2Weuf2N0KGZUlpC0OLy3oRb0d_aBOUdpnoIJ59Gc95H
 0tVX5nPl42Ow2ua9pLZqPg-GJQnmXwukVgV6w4dDoRsFVYbrRSdp-quU4pyNfj987
 GWM
 
-````
 
 **API Errors**
 
@@ -300,7 +299,7 @@ The documentation that follows defines all endpoints, parameters and error messa
 
 If you have a valid client ID, client secret, and MobiControl administrator credentials, you can test each API call by clicking the **Authorize** button on the lower right of this page.
 
-<b id="Warning2" >WARNING: API calls sent from this page are executed against your MobiControl environment. Exercise extreme caution when executing each API call against a production environment and/or device.**
+<b id="Warning2" >WARNING: API calls sent from this page are executed against your MobiControl environment. Exercise extreme caution when executing each API call against a production environment and/or device.</b>
 
 
 
@@ -314,26 +313,23 @@ MobiControl API calls are protected by OAuth2 (RFC 6749), and support both Resou
 The base URL for all API requests is: `https://[your-mobicontrol-server]/MobiControl/api`
 
 ### Authentication
+### Authentication
 Before making API calls, you need to obtain an OAuth2 access token:
 
 1. **Request an access token**:
-````
-
+```
 POST /token
 Authorization: Basic {base64 encoded client_id:client_secret}
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=password&username={admin_username}&password={admin_password}
-
 ```
 
 2. **Use the access token**:
 ```
-
 GET /devices
 Authorization: Bearer {access_token}
-
-````
+```
 
 ### Making Requests
 - All requests should include the `Authorization` header with your access token
@@ -15365,4 +15361,3 @@ Requires the caller to be granted Web Console Access permission.
 - **401**: Unauthorized access.
 
 ---
-````
